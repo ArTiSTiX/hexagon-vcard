@@ -236,12 +236,12 @@
   	var main_picks = {
   		active: false,
   		offset: 0.5,
-  		max_offset: 1.0,
+  		max_offset: 0.5,
   		radius: 0,
   		max_radius: 300,
   		picks: [
-	  		new Pick(5, "Projects", "#", null, "#666", "projects", null, true, true),
-//	  		new Pick(6, "Contact", "#", null, "#666", "contact", null, true, true)
+	  		new Pick(5, "Projects", "http://twitter.com", null, "#666", "projects", null, true, true),
+	  		new Pick(6, "Contact", "http://twitter.com", null, "#666", "contact", null, true, true)
   		]
   	}
 
@@ -255,9 +255,9 @@
 	  		new Pick(1, simpleicons.twitter.name, "https://twitter.com/artistix_fr", simpleicons.twitter.icon, simpleicons.twitter.color, "twitter", true, true),
 	  		new Pick(2, simpleicons.deviantart.name, "http://artistix-fr.deviantart.com/", simpleicons.deviantart.icon, simpleicons.deviantart.color, "deviantart", true, true),
 	  		new Pick(3, simpleicons.facebook.name, "https://www.facebook.com/ArTiSTiX", simpleicons.facebook.icon, simpleicons.facebook.color, "facebook", true,  true),
-	  		new Pick(4, simpleicons.googleplus.name, "https://www.google.com/+R%C3%A9miJarasson", simpleicons.googleplus.icon, simpleicons.googleplus.color, "googleplus", true, true),
-	  		new Pick(5, simpleicons.soundcloud.name, "https://soundcloud.com/artistix", simpleicons.soundcloud.icon, simpleicons.soundcloud.color, "soundcloud", true,  true),
-	  		new Pick(6, simpleicons.lastfm.name, "http://www.lastfm.fr/user/-ArTiSTiX-", simpleicons.lastfm.icon, simpleicons.lastfm.color, "lastfm", true, true)
+	  		new Pick(4, simpleicons.googleplus.name, "http://twitter.com", simpleicons.googleplus.icon, simpleicons.googleplus.color, "googleplus", true, true),
+	  		new Pick(5, simpleicons.tumblr.name, "http://twitter.com", simpleicons.tumblr.icon, simpleicons.tumblr.color, "tumblr", true,  true),
+	  		new Pick(6, simpleicons.lastfm.name, "http://twitter.com", simpleicons.lastfm.icon, simpleicons.lastfm.color, "lastfm", true, true)
   		]
   	}
 
@@ -268,9 +268,9 @@
   		radius: 0,
   		max_radius: 300,
   		picks: [
-	  		new Pick(1, simpleicons.github.name, "https://github.com/ArTiSTiX", simpleicons.github.icon, simpleicons.github.color, "github", true, true),
-	  		new Pick(3, simpleicons.linkedin.name, "http://fr.linkedin.com/in/remijarasson", simpleicons.linkedin.icon, simpleicons.linkedin.color, "linkedin", true, true),
-	  		new Pick(5, simpleicons.viadeo.name, "http://fr.viadeo.com/fr/profile/remi.jarasson", simpleicons.viadeo.icon, simpleicons.viadeo.color, "viadeo", true, true),
+	  		new Pick(1, simpleicons.github.name, "http://twitter.com", simpleicons.github.icon, simpleicons.github.color, "github", true, true),
+	  		new Pick(3, simpleicons.linkedin.name, "http://twitter.com", simpleicons.linkedin.icon, simpleicons.linkedin.color, "linkedin", true, true),
+	  		new Pick(5, simpleicons.viadeo.name, "http://twitter.com", simpleicons.viadeo.icon, simpleicons.viadeo.color, "viadeo", true, true),
 	  	]
 	  }
 
@@ -281,31 +281,20 @@
   		radius: 0,
   		max_radius: 300,
   		picks: [
-	  		new Pick(2, simpleicons.gmail.name, "#", simpleicons.gmail.icon, simpleicons.gmail.color, "gmail", true, true),
-	  		new Pick(4, simpleicons.skype.name, "#", simpleicons.skype.icon, simpleicons.skype.color, "skype", true, true),
-	  		new Pick(6, simpleicons.steam.name, "#", simpleicons.steam.icon, simpleicons.steam.color, "steam", true, true)
+	  		new Pick(2, simpleicons.gmail.name, "http://twitter.com", simpleicons.gmail.icon, simpleicons.gmail.color, "gmail", true, true),
+	  		new Pick(4, simpleicons.skype.name, "http://twitter.com", simpleicons.skype.icon, simpleicons.skype.color, "skype", true, true),
+	  		new Pick(6, simpleicons.steam.name, "http://twitter.com", simpleicons.steam.icon, simpleicons.steam.color, "steam", true, true)
 	  	]
 	  }
 	  
 
-    var projects_picks = {
-  		active: false,
-  		offset: 0.0,
-  		max_offset: 2.0,
-  		radius: 0,
-  		max_radius: 300,
-  		picks: [
-	  		new Pick(1, "Beshamel", "http://www.beshamel.fr", "img/icons/beshamel-512.png", "#aa0033", "beshamel", true, true),
-	  	]
-	  }
-    
 	  $scope.layers = {
 	  	'main': main_picks,
 	  	'back': back_picks,
 			'social': social_picks,
 			'pro': pro_picks,
 			'contact': contact_picks,
-			'projects': projects_picks
+			'projects': contact_picks
 	  }
 
 	  $scope.layout = 'center';
